@@ -32,9 +32,6 @@ function App() {
           {(!word) && <p>Search a word</p>}
           {(!isLoading && word) && <WordBody word={word} data={data} />}
         </div>
-        <div className="col-span-10 md:col-span-3">
-          <span>03</span>
-        </div>
       </section>
     </Layout>
   );
