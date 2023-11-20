@@ -4,10 +4,17 @@ import Layout from './layout';
 function App() {
   return (
     <Layout>
-      <button
-        class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
-        Button
-      </button>
+      <section className="grid grid-cols-10">
+        <div className="bg-indigo-100 col-span-10 md:col-span-3">
+          <span>01</span>
+        </div>
+        <div className="bg-fuchsia-100 col-span-10 md:col-span-7">
+          <span>02</span>
+        </div>
+        <div className="bg-purple-100 col-span-10 md:col-span-3">
+          <span>03</span>
+        </div>
+      </section>
     </Layout>
   );
 }
