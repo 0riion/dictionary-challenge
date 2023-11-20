@@ -52,7 +52,7 @@ const WordBody = ({ word, data }) => {
 
                 <div>
                   <p>
-                    <span className='font-bold'>Principal definition: </span>
+                    <span className='font-bold p-4'>Principal definition: </span>
                     {meanings[0]['definitions'][0]['definition']}
                   </p>
                 </div>
