@@ -1,5 +1,7 @@
 # Dictionary Challenge
 
+![dictionary](./docs/dictionary.png)
+
 ## Problem
 
 The goal of this challenge is to create a simple web application that is similar to a dictionary. The user should be able to enter a word and the app must show its meaning.
