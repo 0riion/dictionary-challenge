@@ -7,10 +7,9 @@ import Layout from './layout';
 
 function App() {
   const { word, data, setWord, isLoading } = useWord();
-
   return (
     <Layout>
-      <div className="max-w-5xl mx-auto py-10">
+      <section className="max-w-5xl mx-auto py-10">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
             The best dictionary
@@ -22,17 +21,16 @@ function App() {
             Find all words you need to know, just right here.
           </p>
         </div>
-      </div>
+      </section>
 
       <section className="bg-base-200 rounded-sm grid grid-cols-10 gap-4 p-2">
         <div className="col-span-10 md:col-span-3">
           <Search word={word} setWord={setWord} />
         </div>
         <div className="col-span-10 md:col-span-7">
-          {isLoading
-            ? <Loading />
-            : <WordBody />
-          }
+          {isLoading && <Loading />}
+          {(!word) && <p>Search a word</p>}
+          {(!isLoading && word) && <WordBody word={word} data={data} />}
         </div>
         <div className="col-span-10 md:col-span-3">
           <span>03</span>

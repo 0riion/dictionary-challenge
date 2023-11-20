@@ -8,8 +8,7 @@ export const useWord = () => {
   const fetchWord = async () => {
     if (!word) return null;
     const {data} = await axiosInstance.get(`api/v2/entries/en/${word}`);
-    console.log(word, data)
-    return data[0];
+    return data;
   };
 
   const query = useQuery('get word', fetchWord, {

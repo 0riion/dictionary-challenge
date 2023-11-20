@@ -13,7 +13,7 @@ export default function Search({ word, setWord }) {
       <Form autoComplete="off" noValidate onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 form-control w-full p-2 gap-4">
           <label className="label col-span-1">
-            <span className="label-text">You are lucky</span>
+            <span className="label-text">You are lucky 🥳</span>
           </label>
           <input
             type="text"
