@@ -28,7 +28,7 @@ The goal of this challenge is to create a simple web application that is similar
 - React Router Dom
 - Docker
 
-## stallation
+## Installation
 
 Clone the project repository using the following command:
 
