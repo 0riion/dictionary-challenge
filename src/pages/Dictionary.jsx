@@ -23,7 +23,7 @@ function Dictionary() {
         </div>
       </section>
 
-      <section className="bg-base-200 rounded-sm grid grid-cols-10 gap-4 p-2">
+      <section className="bg-base-200 rounded-md grid grid-cols-10 gap-4 p-4">
         <div className="col-span-10 md:col-span-3">
           <Search word={word} setWord={setWord} />
         </div>
