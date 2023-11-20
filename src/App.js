@@ -1,8 +1,11 @@
 import './App.css';
 import Search from './components/search';
+import { useWord } from './hook/DictionaryHooks';
 import Layout from './layout';
 
 function App() {
+  const { word, data, setWord, isLoading } = useWord();
+
   return (
     <Layout>
       <div className="max-w-5xl mx-auto py-10">
@@ -21,7 +24,7 @@ function App() {
 
       <section className="bg-base-200 rounded-sm grid grid-cols-10 gap-4 p-2">
         <div className="col-span-10 md:col-span-3">
-          <Search />
+          <Search word={word} setWord={setWord} />
         </div>
         <div className="bg-fuchsia-100 col-span-10 md:col-span-7">
           <span>02</span>
