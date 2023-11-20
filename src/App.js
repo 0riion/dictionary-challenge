@@ -1,5 +1,7 @@
 import './App.css';
+import Loading from './components/loading';
 import Search from './components/search';
+import WordBody from './components/word-body';
 import { useWord } from './hook/DictionaryHooks';
 import Layout from './layout';
 
@@ -26,10 +28,13 @@ function App() {
         <div className="col-span-10 md:col-span-3">
           <Search word={word} setWord={setWord} />
         </div>
-        <div className="bg-fuchsia-100 col-span-10 md:col-span-7">
-          <span>02</span>
+        <div className="col-span-10 md:col-span-7">
+          {isLoading
+            ? <Loading />
+            : <WordBody />
+          }
         </div>
-        <div className="bg-purple-100 col-span-10 md:col-span-3">
+        <div className="col-span-10 md:col-span-3">
           <span>03</span>
         </div>
       </section>
