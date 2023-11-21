@@ -28,7 +28,6 @@ The goal of this challenge is to create a simple web application that is similar
 - Axios
 - React Query
 - React Router Dom
-- Docker
 
 ## Installation
 
