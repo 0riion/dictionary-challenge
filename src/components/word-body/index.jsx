@@ -4,6 +4,7 @@ import { Howl } from 'howler';
 const WordBody = ({ word, data }) => {
 
   function getLocale(url) {
+    if (!url) return 'en';
     const path = new URL(url).pathname;
     const locale = path.split("-").slice(-1)[0].split(".")[0];
     return locale;
@@ -31,11 +32,12 @@ const WordBody = ({ word, data }) => {
               <>
                 <div key={phonetic + index} className="flex justify-between">
                   <h2 className="text-xl">
-                    <a href={sourceUrls} target="_blank" without rel="noreferrer">
+                    <a href={sourceUrls} target="_blank" rel="noreferrer">
                       <span className="capitalize font-bold underline ml-2">
                         {word}
                       </span>
                     </a>
+
                     {phonetic}
                   </h2>
                   <div>
@@ -61,13 +63,14 @@ const WordBody = ({ word, data }) => {
 
             {meanings.map((meaning) => {
               const { partOfSpeech, definitions } = meaning;
+              console.log(partOfSpeech)
               return (
-                <>
+                <div key={partOfSpeech}>
                   <div className="divider">{partOfSpeech}</div>
-                  {definitions.map(({ definition }) => {
-                    return <p>- {definition}</p>
+                  {definitions.map(({ definition }, index) => {
+                    return <p key={index}>- {definition}</p>
                   })}
-                </>
+                </div>
               );
             })}
           </div>
